@@ -1,6 +1,6 @@
 ﻿namespace EcoPoS_System
 {
-    partial class Form1
+    partial class Login
     {
         /// <summary>
         ///  Required designer variable.
@@ -93,7 +93,7 @@
             PasswordTextBox.TabIndex = 5;
             PasswordTextBox.TextChanged += PasswordTextBox_TextChanged;
             // 
-            // Form1
+            // Login
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
@@ -104,11 +104,14 @@
             Controls.Add(UserLabel);
             Controls.Add(ExitButton);
             Controls.Add(LoginButton);
+            MaximizeBox = false;
             MaximumSize = new Size(400, 300);
+            MinimizeBox = false;
             MinimumSize = new Size(400, 300);
-            Name = "Form1";
+            Name = "Login";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Eco PoS - System";
+            FormClosed += this.Login_FormClosed;
             Load += Form1_Load;
             ResumeLayout(false);
             PerformLayout();
