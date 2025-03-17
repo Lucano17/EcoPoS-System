@@ -41,7 +41,7 @@
             LoginButton.Location = new Point(206, 181);
             LoginButton.Name = "LoginButton";
             LoginButton.Size = new Size(94, 29);
-            LoginButton.TabIndex = 0;
+            LoginButton.TabIndex = 2;
             LoginButton.Text = "Igresar";
             LoginButton.UseVisualStyleBackColor = true;
             LoginButton.Click += LoginButton_Click;
@@ -51,7 +51,7 @@
             ExitButton.Location = new Point(66, 181);
             ExitButton.Name = "ExitButton";
             ExitButton.Size = new Size(94, 29);
-            ExitButton.TabIndex = 1;
+            ExitButton.TabIndex = 3;
             ExitButton.Text = "Salir";
             ExitButton.UseVisualStyleBackColor = true;
             ExitButton.Click += ExitButton_Click;
@@ -81,7 +81,7 @@
             UserTextBox.Location = new Point(138, 55);
             UserTextBox.Name = "UserTextBox";
             UserTextBox.Size = new Size(162, 27);
-            UserTextBox.TabIndex = 4;
+            UserTextBox.TabIndex = 0;
             UserTextBox.TextChanged += UserTextBox_TextChanged;
             // 
             // PasswordTextBox
@@ -90,11 +90,12 @@
             PasswordTextBox.Name = "PasswordTextBox";
             PasswordTextBox.PasswordChar = '*';
             PasswordTextBox.Size = new Size(162, 27);
-            PasswordTextBox.TabIndex = 5;
+            PasswordTextBox.TabIndex = 1;
             PasswordTextBox.TextChanged += PasswordTextBox_TextChanged;
             // 
             // Login
             // 
+            AcceptButton = LoginButton;
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(382, 253);
@@ -111,8 +112,8 @@
             Name = "Login";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Eco PoS - System";
-            FormClosed += this.Login_FormClosed;
-            Load += Form1_Load;
+            FormClosed += Login_Load;
+            Load += Login_Load;
             ResumeLayout(false);
             PerformLayout();
         }

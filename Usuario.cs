@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DLL_Library;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -24,7 +25,26 @@ namespace EcoPoS_System
 
         private void Usuario_FormClosed(object sender, FormClosedEventArgs e)
         {
-            Application.Exit();
+
+        }
+
+        private void Usuario_Load(object sender, EventArgs e)
+        {
+            string requestCode = $"SELECT * FROM Usuarios WHERE " +
+                $"id_user = {Login.Code}";
+            DataSet data = Biblioteca.Herramientas(requestCode);
+
+            NameLabel.Text = data.Tables[0].Rows[0]["username"].
+                ToString();
+            UserLabel.Text = data.Tables[0].Rows[0]["account"].
+                ToString();
+            CodeLabel.Text = data.Tables[0].Rows[0]["id_user"].
+                ToString();
+
+            string image = data.Tables[0].Rows[0]["image"].
+                ToString();
+
+            pictureBox1.Image = Image.FromFile(image);
         }
     }
 }

@@ -103,6 +103,7 @@
             // 
             // pictureBox1
             // 
+            pictureBox1.BackgroundImageLayout = ImageLayout.Center;
             pictureBox1.Location = new Point(502, 53);
             pictureBox1.Name = "pictureBox1";
             pictureBox1.Size = new Size(125, 117);
@@ -174,8 +175,10 @@
             MaximizeBox = false;
             MinimizeBox = false;
             Name = "Administrador";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Administrador";
             FormClosed += Administrador_FormClosed;
+            Load += Administrador_Load;
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
             PerformLayout();

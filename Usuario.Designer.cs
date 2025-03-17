@@ -86,9 +86,11 @@
             // 
             // pictureBox1
             // 
+            pictureBox1.BackgroundImageLayout = ImageLayout.Center;
             pictureBox1.Location = new Point(517, 43);
             pictureBox1.Name = "pictureBox1";
             pictureBox1.Size = new Size(125, 117);
+            pictureBox1.SizeMode = PictureBoxSizeMode.AutoSize;
             pictureBox1.TabIndex = 21;
             pictureBox1.TabStop = false;
             // 
@@ -169,8 +171,10 @@
             MaximizeBox = false;
             MinimizeBox = false;
             Name = "Usuario";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Usuario";
             FormClosed += Usuario_FormClosed;
+            Load += Usuario_Load;
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
             PerformLayout();

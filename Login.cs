@@ -7,14 +7,15 @@ namespace EcoPoS_System
 {
     public partial class Login : Form
     {
+        public static String Code = "";
         public Login()
         {
             InitializeComponent();
         }
 
-        private void Form1_Load(object sender, EventArgs e)
+        private void Login_Load(object sender, EventArgs e)
         {
-            Application.Exit();
+
         }
 
         private void LoginButton_Click(object sender, EventArgs e)
@@ -29,6 +30,8 @@ namespace EcoPoS_System
 
                 if (connect.Tables.Count > 0 && connect.Tables[0].Rows.Count > 0)
                 {
+                    Code = connect.Tables[0].Rows[0]["id_user"].
+                        ToString().Trim();
                     string account = connect.Tables[0].Rows[0]["account"]
                         .ToString().Trim();
                     string password = connect.Tables[0].Rows[0]["password"]
@@ -50,7 +53,6 @@ namespace EcoPoS_System
                             this.Hide();
                             User.Show();
                         }
-                        MessageBox.Show("Inicio de sesión correcto");
                     }
                 }
                 else
