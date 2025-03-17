@@ -115,5 +115,12 @@ namespace EcoPoS_System
             ManCli.MdiParent = this;
             ManCli.Show();
         }
+
+        private void productosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Mantenimiento_Productos ManProd = new Mantenimiento_Productos();
+            ManProd.MdiParent = this;
+            ManProd.Show();
+        }
     }
 }

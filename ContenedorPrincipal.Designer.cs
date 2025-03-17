@@ -375,8 +375,9 @@
             // productosToolStripMenuItem
             // 
             productosToolStripMenuItem.Name = "productosToolStripMenuItem";
-            productosToolStripMenuItem.Size = new Size(158, 26);
+            productosToolStripMenuItem.Size = new Size(224, 26);
             productosToolStripMenuItem.Text = "Productos";
+            productosToolStripMenuItem.Click += productosToolStripMenuItem_Click;
             // 
             // procesosToolStripMenuItem
             // 
