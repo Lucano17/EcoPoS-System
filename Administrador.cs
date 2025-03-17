@@ -72,5 +72,12 @@ namespace EcoPoS_System
 
             pictureBox1.Image = Image.FromFile(image);
         }
+
+        private void PrincipalButton_Click(object sender, EventArgs e)
+        {
+            ContenedorPrincipal principalContainer = new ContenedorPrincipal();
+            this.Hide();
+            principalContainer.Show();
+        }
     }
 }

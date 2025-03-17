@@ -151,6 +151,7 @@
             PrincipalButton.TabIndex = 15;
             PrincipalButton.Text = "Principal";
             PrincipalButton.UseVisualStyleBackColor = true;
+            PrincipalButton.Click += PrincipalButton_Click;
             // 
             // Usuario
             // 
