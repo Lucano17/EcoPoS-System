@@ -91,5 +91,76 @@ namespace EcoPoS_System
         {
 
         }
+
+        private void PriceTextBox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void SetButton_Click(object sender, EventArgs e)
+        {
+            // TO-DO: Agregar referencia a librería .dll | ErrorTextBox component
+            //Error: Al ingresar varias filas, no se agrega el monto, ni se calcula bien cuando lo hace
+
+            //if (Biblioteca.ValidarFormulario(this, errorProvider) == false)
+            //{
+            int contadorFila = 0;
+            bool exists = false;
+            int numeroFila = 0;
+            // TO-DO: Revisar las variables price & quantity y los Convert para hacer
+            // un código más limpio
+            //double productPrice = Convert.ToDouble(dataGridView1.Rows[contadorFila].Cells[2].Value);
+            //double productQuantity = Convert.ToDouble(dataGridView1.Rows[contadorFila].Cells[3].Value);
+
+            // Verificar si el producto ya existe en el DataGridView
+            foreach (DataGridViewRow fila in dataGridView1.Rows)
+            {
+                if (fila.Cells[0].Value != null && fila.Cells[0].Value.ToString() == ProductCodeTextBox.Text)
+                {
+                    exists = true;
+                    numeroFila = fila.Index;
+                    break;
+                }
+            }
+
+            if (exists)
+            {
+                // Actualizar cantidad del producto ya existente
+                int nuevaCantidad = Convert.ToInt32(dataGridView1.Rows[numeroFila].Cells[3].Value) +
+                                    Convert.ToInt32(QuantityTextBox.Text);
+                dataGridView1.Rows[numeroFila].Cells[3].Value = nuevaCantidad;
+
+                // Calcular el monto (precio * nuevaCantidad)
+                double precio = Convert.ToDouble(dataGridView1.Rows[numeroFila].Cells[2].Value);
+                dataGridView1.Rows[numeroFila].Cells[4].Value = precio * nuevaCantidad;
+            }
+            else
+            {
+                // Agregar una nueva fila si el producto no existe
+                double precio = Convert.ToDouble(PriceTextBox.Text);
+                int cantidad = Convert.ToInt32(QuantityTextBox.Text);
+                double monto = precio * cantidad;
+
+                dataGridView1.Rows.Add(
+                    ProductCodeTextBox.Text,
+                    DescriptionTextBox.Text,
+                    precio,
+                    cantidad,
+                    monto); // Se añade el monto correctamente
+
+                contadorFila++;
+            }
+            //}
+        }
+
+        private void DescriptionTextBox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void QuantityTextBox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
