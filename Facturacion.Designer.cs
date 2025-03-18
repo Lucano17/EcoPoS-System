@@ -201,25 +201,25 @@
             // 
             // TotalPriceLabel
             // 
-            TotalPriceLabel.AutoSize = true;
             TotalPriceLabel.Font = new Font("Segoe UI", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
             TotalPriceLabel.ForeColor = SystemColors.ControlText;
-            TotalPriceLabel.Location = new Point(680, 604);
+            TotalPriceLabel.Location = new Point(792, 603);
             TotalPriceLabel.Name = "TotalPriceLabel";
-            TotalPriceLabel.Size = new Size(117, 41);
+            TotalPriceLabel.Size = new Size(210, 41);
             TotalPriceLabel.TabIndex = 28;
-            TotalPriceLabel.Text = "TOTAL:";
+            TotalPriceLabel.Click += TotalPriceLabel_Click_1;
             // 
             // label1
             // 
             label1.BackColor = SystemColors.ButtonHighlight;
             label1.Font = new Font("Segoe UI", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label1.Location = new Point(803, 604);
+            label1.Location = new Point(677, 603);
             label1.Name = "label1";
-            label1.Size = new Size(209, 41);
+            label1.Size = new Size(125, 41);
             label1.TabIndex = 29;
-            label1.Text = "label1";
+            label1.Text = "TOTAL:";
             label1.TextAlign = ContentAlignment.MiddleLeft;
+            label1.Click += label1_Click;
             // 
             // ClientLabel
             // 

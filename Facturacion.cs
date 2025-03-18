@@ -96,7 +96,7 @@ namespace EcoPoS_System
         {
 
         }
-
+        public static double total;
         private void SetButton_Click(object sender, EventArgs e)
         {
             // TO-DO: Agregar referencia a librería .dll | ErrorTextBox component
@@ -151,6 +151,13 @@ namespace EcoPoS_System
                 contadorFila++;
             }
             //}
+            total = 0;
+            foreach (DataGridViewRow fila in dataGridView1.Rows)
+            {
+                total += Convert.ToDouble(fila.Cells[4].Value);
+
+            }
+            TotalPriceLabel.Text = "$" + total.ToString();
         }
 
         private void DescriptionTextBox_TextChanged(object sender, EventArgs e)
@@ -159,6 +166,21 @@ namespace EcoPoS_System
         }
 
         private void QuantityTextBox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void TotalPriceLabel_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
         {
 
         }
