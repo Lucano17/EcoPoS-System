@@ -49,7 +49,7 @@
             SelectButton.TabIndex = 0;
             SelectButton.Text = "Seleccionar";
             SelectButton.UseVisualStyleBackColor = true;
-            SelectButton.Click += SelectButton_Click_1;
+            SelectButton.Click += SelectButton_Click;
             // 
             // PrintButton
             // 

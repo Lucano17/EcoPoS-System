@@ -75,11 +75,6 @@ namespace EcoPoS_System
 
         }
 
-        private void SelectButton_Click_1(object sender, EventArgs e)
-        {
-
-        }
-
         private void Consultas_Load_1(object sender, EventArgs e)
         {
 

@@ -158,7 +158,7 @@ namespace EcoPoS_System
                 total += Convert.ToDouble(fila.Cells[4].Value);
 
             }
-            TotalPriceLabel.Text = "$" + total.ToString();
+            TotalPriceLabel.Text = "$ " + total.ToString();
         }
 
         private void DescriptionTextBox_TextChanged(object sender, EventArgs e)
@@ -178,7 +178,7 @@ namespace EcoPoS_System
 
         private void TotalPriceLabel_Click_1(object sender, EventArgs e)
         {
-
+            TotalPriceLabel.Text = "$ " + total.ToString(); ;
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -193,10 +193,67 @@ namespace EcoPoS_System
                 total = total - (Convert.ToDouble(
                     dataGridView1.Rows[dataGridView1.CurrentRow.Index]
                     .Cells[4].Value));
-                TotalPriceLabel.Text = "$" + total.ToString();
+                TotalPriceLabel.Text = "$ " + total.ToString();
                 dataGridView1.Rows.RemoveAt(dataGridView1.CurrentRow.Index);
                 contadorFila--;
             }
+        }
+
+        private void ClientsButton_Click(object sender, EventArgs e)
+        {
+            Consultar_Cliente ConsCli = new Consultar_Cliente();
+            ConsCli.ShowDialog();
+            if (ConsCli.DialogResult == DialogResult.OK)
+            {
+                ClientCodeTextBox.Text = ConsCli.dataGridView1.Rows[ConsCli.dataGridView1.
+                                          CurrentRow.Index].Cells[0].Value.ToString();
+                ClientLabel.Text = ConsCli.dataGridView1.Rows[ConsCli.dataGridView1.
+                                          CurrentRow.Index].Cells[1].Value.ToString();
+                ProductCodeTextBox.Focus();
+            }
+
+        }
+
+        private void ClientLabel_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ProductsButton_Click(object sender, EventArgs e)
+        {
+            Consultar_Productos ConsProd = new Consultar_Productos();
+            ConsProd.ShowDialog();
+            if (ConsProd.DialogResult == DialogResult.OK)
+            {
+                ProductCodeTextBox.Text = ConsProd.dataGridView1.Rows[ConsProd.dataGridView1.
+                                          CurrentRow.Index].Cells[0].Value.ToString();
+                DescriptionTextBox.Text = ConsProd.dataGridView1.Rows[ConsProd.dataGridView1.
+                                          CurrentRow.Index].Cells[1].Value.ToString();
+                PriceTextBox.Text = ConsProd.dataGridView1.Rows[ConsProd.dataGridView1.
+                                          CurrentRow.Index].Cells[2].Value.ToString();
+
+                QuantityTextBox.Focus();
+            }
+        }
+
+        private void SetNewButton_Click(object sender, EventArgs e)
+        {
+            Nuevo();
+        }
+
+        public override void Nuevo()
+        {
+            ClientCodeTextBox.Text = "";
+            ClientLabel.Text = "";
+            ProductCodeTextBox.Text = "";
+            DescriptionTextBox.Text = "";
+            PriceTextBox.Text = "";
+            QuantityTextBox.Text = "";
+            TotalPriceLabel.Text = "$ ";
+            dataGridView1.Rows.Clear();
+            contadorFila = 0;
+            total = 0;
+            ClientCodeTextBox.Focus();
         }
     }
 }

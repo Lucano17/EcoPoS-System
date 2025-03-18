@@ -57,6 +57,7 @@
             Precio = new DataGridViewTextBoxColumn();
             Cantidad = new DataGridViewTextBoxColumn();
             Importe = new DataGridViewTextBoxColumn();
+            SetNewButton = new Button();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
@@ -83,6 +84,7 @@
             ClientsButton.TabIndex = 2;
             ClientsButton.Text = "Clientes";
             ClientsButton.UseVisualStyleBackColor = true;
+            ClientsButton.Click += ClientsButton_Click;
             // 
             // ProductsButton
             // 
@@ -92,6 +94,7 @@
             ProductsButton.TabIndex = 3;
             ProductsButton.Text = "Productos";
             ProductsButton.UseVisualStyleBackColor = true;
+            ProductsButton.Click += ProductsButton_Click;
             // 
             // DeleteButton
             // 
@@ -115,7 +118,7 @@
             // 
             // BillButton
             // 
-            BillButton.Location = new Point(908, 209);
+            BillButton.Location = new Point(908, 244);
             BillButton.Name = "BillButton";
             BillButton.Size = new Size(94, 29);
             BillButton.TabIndex = 6;
@@ -208,6 +211,7 @@
             TotalPriceLabel.Name = "TotalPriceLabel";
             TotalPriceLabel.Size = new Size(210, 41);
             TotalPriceLabel.TabIndex = 28;
+            TotalPriceLabel.Text = "$";
             TotalPriceLabel.Click += TotalPriceLabel_Click_1;
             // 
             // label1
@@ -230,6 +234,7 @@
             ClientLabel.Name = "ClientLabel";
             ClientLabel.Size = new Size(174, 25);
             ClientLabel.TabIndex = 31;
+            ClientLabel.Click += ClientLabel_Click;
             // 
             // ClientCodeTextBox
             // 
@@ -325,11 +330,22 @@
             Importe.Name = "Importe";
             Importe.Width = 150;
             // 
+            // SetNewButton
+            // 
+            SetNewButton.Location = new Point(908, 209);
+            SetNewButton.Name = "SetNewButton";
+            SetNewButton.Size = new Size(94, 29);
+            SetNewButton.TabIndex = 38;
+            SetNewButton.Text = "Nuevo";
+            SetNewButton.UseVisualStyleBackColor = true;
+            SetNewButton.Click += SetNewButton_Click;
+            // 
             // Facturacion
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1032, 700);
+            Controls.Add(SetNewButton);
             Controls.Add(dataGridView1);
             Controls.Add(label6);
             Controls.Add(label5);
@@ -382,6 +398,7 @@
             Controls.SetChildIndex(label5, 0);
             Controls.SetChildIndex(label6, 0);
             Controls.SetChildIndex(dataGridView1, 0);
+            Controls.SetChildIndex(SetNewButton, 0);
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ResumeLayout(false);
@@ -419,5 +436,6 @@
         private DataGridViewTextBoxColumn Precio;
         private DataGridViewTextBoxColumn Cantidad;
         private DataGridViewTextBoxColumn Importe;
+        private Button SetNewButton;
     }
 }
