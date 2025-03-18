@@ -97,6 +97,7 @@ namespace EcoPoS_System
 
         }
         public static double total;
+        public static int contadorFila = 0;
         private void SetButton_Click(object sender, EventArgs e)
         {
             // TO-DO: Agregar referencia a librería .dll | ErrorTextBox component
@@ -104,7 +105,7 @@ namespace EcoPoS_System
 
             //if (Biblioteca.ValidarFormulario(this, errorProvider) == false)
             //{
-            int contadorFila = 0;
+
             bool exists = false;
             int numeroFila = 0;
             // TO-DO: Revisar las variables price & quantity y los Convert para hacer
@@ -183,6 +184,19 @@ namespace EcoPoS_System
         private void label1_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void DeleteButton_Click(object sender, EventArgs e)
+        {
+            if (contadorFila > 0)
+            {
+                total = total - (Convert.ToDouble(
+                    dataGridView1.Rows[dataGridView1.CurrentRow.Index]
+                    .Cells[4].Value));
+                TotalPriceLabel.Text = "$" + total.ToString();
+                dataGridView1.Rows.RemoveAt(dataGridView1.CurrentRow.Index);
+                contadorFila--;
+            }
         }
     }
 }

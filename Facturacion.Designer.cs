@@ -101,6 +101,7 @@
             DeleteButton.TabIndex = 4;
             DeleteButton.Text = "Eliminar";
             DeleteButton.UseVisualStyleBackColor = true;
+            DeleteButton.Click += DeleteButton_Click;
             // 
             // SetButton
             // 
