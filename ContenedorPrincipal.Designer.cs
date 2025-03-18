@@ -368,14 +368,14 @@
             // clientesToolStripMenuItem
             // 
             clientesToolStripMenuItem.Name = "clientesToolStripMenuItem";
-            clientesToolStripMenuItem.Size = new Size(224, 26);
+            clientesToolStripMenuItem.Size = new Size(158, 26);
             clientesToolStripMenuItem.Text = "Clientes";
             clientesToolStripMenuItem.Click += clientesToolStripMenuItem_Click;
             // 
             // productosToolStripMenuItem
             // 
             productosToolStripMenuItem.Name = "productosToolStripMenuItem";
-            productosToolStripMenuItem.Size = new Size(224, 26);
+            productosToolStripMenuItem.Size = new Size(158, 26);
             productosToolStripMenuItem.Text = "Productos";
             productosToolStripMenuItem.Click += productosToolStripMenuItem_Click;
             // 
@@ -402,19 +402,21 @@
             // clientesToolStripMenuItem1
             // 
             clientesToolStripMenuItem1.Name = "clientesToolStripMenuItem1";
-            clientesToolStripMenuItem1.Size = new Size(158, 26);
+            clientesToolStripMenuItem1.Size = new Size(224, 26);
             clientesToolStripMenuItem1.Text = "Clientes";
+            clientesToolStripMenuItem1.Click += clientesToolStripMenuItem1_Click;
             // 
             // productosToolStripMenuItem1
             // 
             productosToolStripMenuItem1.Name = "productosToolStripMenuItem1";
-            productosToolStripMenuItem1.Size = new Size(158, 26);
+            productosToolStripMenuItem1.Size = new Size(224, 26);
             productosToolStripMenuItem1.Text = "Productos";
+            productosToolStripMenuItem1.Click += productosToolStripMenuItem1_Click;
             // 
             // ventasToolStripMenuItem
             // 
             ventasToolStripMenuItem.Name = "ventasToolStripMenuItem";
-            ventasToolStripMenuItem.Size = new Size(158, 26);
+            ventasToolStripMenuItem.Size = new Size(224, 26);
             ventasToolStripMenuItem.Text = "Ventas";
             // 
             // helpMenu

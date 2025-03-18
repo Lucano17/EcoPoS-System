@@ -122,5 +122,19 @@ namespace EcoPoS_System
             ManProd.MdiParent = this;
             ManProd.Show();
         }
+
+        private void productosToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            Consultar_Productos ConsPro = new Consultar_Productos();
+            ConsPro.MdiParent = this;
+            ConsPro.Show();
+        }
+
+        private void clientesToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            Consultar_Cliente ConsClient = new Consultar_Cliente();
+            ConsClient.MdiParent = this;
+            ConsClient.Show();
+        }
     }
 }
