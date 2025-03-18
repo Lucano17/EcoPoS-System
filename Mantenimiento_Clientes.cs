@@ -57,6 +57,30 @@ namespace EcoPoS_System
                 MessageBox.Show("Ha ocurrido un error: " + error);
             }
         }
+        public override void Consultar()
+        {
+            try
+            {
+                Consultar_Cliente ConsClient = new Consultar_Cliente();
+                ConsClient.Show();
+            }
+            catch (Exception error)
+            {
+                MessageBox.Show("Ha ocurrido un error: " + error);
+            }
+        }
+
+        public override void Nuevo()
+        {
+            if (string.IsNullOrEmpty(ClientIDTextBox.Text.Trim()) == false &&
+                string.IsNullOrEmpty(ClientNameTextBox.Text.Trim()) == false &&
+                string.IsNullOrEmpty(ClientLastNameTextBox.Text.Trim()) == false)
+            {
+                ClientIDTextBox.Text = "";
+                ClientNameTextBox.Text = "";
+                ClientLastNameTextBox.Text = "";
+            }
+        }
 
         private void ClientIDTextBox_TextChanged(object sender, EventArgs e)
         {

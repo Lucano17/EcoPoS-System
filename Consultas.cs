@@ -84,5 +84,10 @@ namespace EcoPoS_System
         {
 
         }
+
+        private void SearchButton_Click_1(object sender, EventArgs e)
+        {
+
+        }
     }
 }

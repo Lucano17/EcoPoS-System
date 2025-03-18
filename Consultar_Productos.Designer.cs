@@ -30,6 +30,10 @@
         {
             SuspendLayout();
             // 
+            // SearchButton
+            // 
+            SearchButton.Click += SearchButton_Click;
+            // 
             // Consultar_Productos
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -39,6 +43,7 @@
             Text = "Consultar_Productos";
             Load += Consultar_Productos_Load;
             ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion

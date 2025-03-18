@@ -58,6 +58,23 @@ namespace EcoPoS_System
             }
         }
 
+        public override void Nuevo()
+        {
+            if (string.IsNullOrEmpty(ProductIDTextBox.Text.Trim()) == false &&
+                string.IsNullOrEmpty(ProductNameTextBox.Text.Trim()) == false &&
+                string.IsNullOrEmpty(ProductPriceTextBox.Text.Trim()) == false)
+            {
+                ProductIDTextBox.Text = "";
+                ProductNameTextBox.Text = "";
+                ProductPriceTextBox.Text = "";
+            }
+        }
+        public override void Consultar()
+        {
+            Consultar_Productos ConsPro = new Consultar_Productos();
+            ConsPro.Show();
+        }
+
         private void ProductIDTextBox_TextChanged(object sender, EventArgs e)
         {
 

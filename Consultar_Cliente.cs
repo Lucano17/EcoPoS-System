@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DLL_Library;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -20,6 +21,25 @@ namespace EcoPoS_System
         private void Consultar_Cliente_Load(object sender, EventArgs e)
         {
             dataGridView1.DataSource = ShowInfo("Clientes").Tables[0];
+        }
+
+        private void SearchButton_Click(object sender, EventArgs e)
+        {
+            if (string.IsNullOrEmpty(textBox1.Text.Trim()) == false)
+            {
+                try
+                {
+                    DataSet DS;
+                    string buscar = "SELECT * FROM Clientes " +
+                        "WHERE Nombre_cliente LIKE ('%" + textBox1.Text.Trim() + "%')";
+                    DS = Biblioteca.Herramientas(buscar);
+                    dataGridView1.DataSource = DS.Tables[0];
+                }
+                catch (Exception error)
+                {
+                    MessageBox.Show("No se puede conectar", error.Message);
+                }
+            }
         }
     }
 }

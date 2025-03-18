@@ -77,6 +77,7 @@
             SearchButton.TabIndex = 3;
             SearchButton.Text = "Buscar";
             SearchButton.UseVisualStyleBackColor = true;
+            SearchButton.Click += SearchButton_Click_1;
             // 
             // textBox1
             // 
@@ -128,12 +129,11 @@
         }
 
         #endregion
-
-        private Button SelectButton;
-        private Button PrintButton;
         private Label NameLabel;
-        private Button SearchButton;
-        private TextBox textBox1;
         public DataGridView dataGridView1;
+        public Button SelectButton;
+        public Button PrintButton;
+        public Button SearchButton;
+        public TextBox textBox1;
     }
 }

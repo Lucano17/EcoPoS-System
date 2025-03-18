@@ -30,6 +30,10 @@
         {
             SuspendLayout();
             // 
+            // SearchButton
+            // 
+            SearchButton.Click += SearchButton_Click;
+            // 
             // Consultar_Cliente
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
