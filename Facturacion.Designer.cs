@@ -34,27 +34,25 @@
             DeleteButton = new Button();
             SetButton = new Button();
             BillButton = new Button();
-            SellerLabel = new Label();
+            TextLabel1 = new Label();
             GridCodeLabel = new Label();
-            CodeLabel = new Label();
-            label6 = new Label();
-            ClientLabel = new Label();
-            textBox1 = new TextBox();
-            textBox2 = new TextBox();
-            textBox3 = new TextBox();
-            textBox4 = new TextBox();
-            textBox5 = new TextBox();
-            textBox6 = new TextBox();
-            textBox7 = new TextBox();
+            TextLabel2 = new Label();
+            SellerLabel = new Label();
+            TextLabel3 = new Label();
+            PriceTextBox = new TextBox();
+            ProductCodeTextBox = new TextBox();
+            QuantityTextBox = new TextBox();
+            DescriptionTextBox = new TextBox();
             dataGridView1 = new DataGridView();
             pictureBox1 = new PictureBox();
             GridDescriptionLabel = new Label();
             GridPriceLabel = new Label();
             GridQuantityLabel = new Label();
-            label5 = new Label();
             label2 = new Label();
             TotalPriceLabel = new Label();
             label1 = new Label();
+            ClientLabel = new Label();
+            ClientCodeTextBox = new TextBox();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
@@ -65,12 +63,13 @@
             // 
             // SearchButton
             // 
-            SearchButton.Location = new Point(350, 119);
+            SearchButton.Location = new Point(340, 129);
             SearchButton.Name = "SearchButton";
             SearchButton.Size = new Size(94, 29);
             SearchButton.TabIndex = 1;
             SearchButton.Text = "Buscar";
             SearchButton.UseVisualStyleBackColor = true;
+            SearchButton.Click += SearchButton_Click;
             // 
             // ClientsButton
             // 
@@ -117,14 +116,14 @@
             BillButton.Text = "Facturar";
             BillButton.UseVisualStyleBackColor = true;
             // 
-            // SellerLabel
+            // TextLabel1
             // 
-            SellerLabel.AutoSize = true;
-            SellerLabel.Location = new Point(44, 87);
-            SellerLabel.Name = "SellerLabel";
-            SellerLabel.Size = new Size(76, 20);
-            SellerLabel.TabIndex = 7;
-            SellerLabel.Text = "Vendedor:";
+            TextLabel1.AutoSize = true;
+            TextLabel1.Location = new Point(41, 92);
+            TextLabel1.Name = "TextLabel1";
+            TextLabel1.Size = new Size(76, 20);
+            TextLabel1.TabIndex = 7;
+            TextLabel1.Text = "Vendedor:";
             // 
             // GridCodeLabel
             // 
@@ -138,81 +137,63 @@
             GridCodeLabel.Text = "Código";
             GridCodeLabel.TextAlign = ContentAlignment.MiddleCenter;
             // 
-            // CodeLabel
+            // TextLabel2
             // 
-            CodeLabel.AutoSize = true;
-            CodeLabel.Location = new Point(41, 128);
-            CodeLabel.Name = "CodeLabel";
-            CodeLabel.Size = new Size(61, 20);
-            CodeLabel.TabIndex = 10;
-            CodeLabel.Text = "Código:";
+            TextLabel2.AutoSize = true;
+            TextLabel2.Location = new Point(41, 133);
+            TextLabel2.Name = "TextLabel2";
+            TextLabel2.Size = new Size(61, 20);
+            TextLabel2.TabIndex = 10;
+            TextLabel2.Text = "Código:";
             // 
-            // label6
+            // SellerLabel
             // 
-            label6.AutoSize = true;
-            label6.Location = new Point(198, 87);
-            label6.Name = "label6";
-            label6.Size = new Size(50, 20);
-            label6.TabIndex = 12;
-            label6.Text = "label6";
+            SellerLabel.BackColor = SystemColors.ButtonHighlight;
+            SellerLabel.BorderStyle = BorderStyle.Fixed3D;
+            SellerLabel.Location = new Point(139, 87);
+            SellerLabel.Name = "SellerLabel";
+            SellerLabel.Size = new Size(174, 25);
+            SellerLabel.TabIndex = 12;
+            SellerLabel.Click += SellerLabel_Click;
             // 
-            // ClientLabel
+            // TextLabel3
             // 
-            ClientLabel.AutoSize = true;
-            ClientLabel.Location = new Point(41, 167);
-            ClientLabel.Name = "ClientLabel";
-            ClientLabel.Size = new Size(58, 20);
-            ClientLabel.TabIndex = 13;
-            ClientLabel.Text = "Cliente:";
+            TextLabel3.AutoSize = true;
+            TextLabel3.Location = new Point(41, 172);
+            TextLabel3.Name = "TextLabel3";
+            TextLabel3.Size = new Size(58, 20);
+            TextLabel3.TabIndex = 13;
+            TextLabel3.Text = "Cliente:";
             // 
-            // textBox1
+            // PriceTextBox
             // 
-            textBox1.Location = new Point(142, 121);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(181, 27);
-            textBox1.TabIndex = 15;
+            PriceTextBox.Location = new Point(535, 279);
+            PriceTextBox.Name = "PriceTextBox";
+            PriceTextBox.Size = new Size(125, 27);
+            PriceTextBox.TabIndex = 16;
             // 
-            // textBox2
+            // ProductCodeTextBox
             // 
-            textBox2.Location = new Point(360, 279);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(125, 27);
-            textBox2.TabIndex = 16;
+            ProductCodeTextBox.Location = new Point(41, 279);
+            ProductCodeTextBox.Name = "ProductCodeTextBox";
+            ProductCodeTextBox.Size = new Size(187, 27);
+            ProductCodeTextBox.TabIndex = 17;
+            ProductCodeTextBox.TextChanged += ProductCodeTextBox_TextChanged;
             // 
-            // textBox3
+            // QuantityTextBox
             // 
-            textBox3.Location = new Point(34, 279);
-            textBox3.Name = "textBox3";
-            textBox3.Size = new Size(125, 27);
-            textBox3.TabIndex = 17;
+            QuantityTextBox.Location = new Point(680, 279);
+            QuantityTextBox.Name = "QuantityTextBox";
+            QuantityTextBox.Size = new Size(125, 27);
+            QuantityTextBox.TabIndex = 18;
             // 
-            // textBox4
+            // DescriptionTextBox
             // 
-            textBox4.Location = new Point(519, 279);
-            textBox4.Name = "textBox4";
-            textBox4.Size = new Size(125, 27);
-            textBox4.TabIndex = 18;
-            // 
-            // textBox5
-            // 
-            textBox5.Location = new Point(142, 160);
-            textBox5.Name = "textBox5";
-            textBox5.Size = new Size(181, 27);
-            textBox5.TabIndex = 19;
-            // 
-            // textBox6
-            // 
-            textBox6.Location = new Point(188, 279);
-            textBox6.Name = "textBox6";
-            textBox6.Size = new Size(125, 27);
-            textBox6.TabIndex = 20;
-            // 
-            // textBox7
-            // 
-            textBox7.Location = new Point(142, 77);
-            textBox7.Name = "textBox7";
-            textBox7.Size = new Size(181, 27);
-            textBox7.TabIndex = 21;
+            DescriptionTextBox.Location = new Point(253, 279);
+            DescriptionTextBox.Multiline = true;
+            DescriptionTextBox.Name = "DescriptionTextBox";
+            DescriptionTextBox.Size = new Size(272, 27);
+            DescriptionTextBox.TabIndex = 20;
             // 
             // dataGridView1
             // 
@@ -268,13 +249,6 @@
             GridQuantityLabel.Text = "Cantidad";
             GridQuantityLabel.TextAlign = ContentAlignment.MiddleCenter;
             // 
-            // label5
-            // 
-            label5.Location = new Point(360, 180);
-            label5.Name = "label5";
-            label5.Size = new Size(100, 23);
-            label5.TabIndex = 1;
-            // 
             // label2
             // 
             label2.BackColor = SystemColors.ActiveCaption;
@@ -309,32 +283,47 @@
             label1.Text = "label1";
             label1.TextAlign = ContentAlignment.MiddleLeft;
             // 
+            // ClientLabel
+            // 
+            ClientLabel.BackColor = SystemColors.ButtonHighlight;
+            ClientLabel.BorderStyle = BorderStyle.Fixed3D;
+            ClientLabel.Location = new Point(139, 167);
+            ClientLabel.Name = "ClientLabel";
+            ClientLabel.Size = new Size(174, 25);
+            ClientLabel.TabIndex = 31;
+            // 
+            // ClientCodeTextBox
+            // 
+            ClientCodeTextBox.Location = new Point(139, 129);
+            ClientCodeTextBox.Name = "ClientCodeTextBox";
+            ClientCodeTextBox.Size = new Size(174, 27);
+            ClientCodeTextBox.TabIndex = 32;
+            ClientCodeTextBox.TextChanged += ClientCodeTextBox_TextChanged;
+            // 
             // Facturacion
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1014, 700);
+            Controls.Add(ClientCodeTextBox);
+            Controls.Add(ClientLabel);
             Controls.Add(label1);
             Controls.Add(TotalPriceLabel);
             Controls.Add(label2);
-            Controls.Add(label5);
             Controls.Add(GridQuantityLabel);
             Controls.Add(GridPriceLabel);
             Controls.Add(GridDescriptionLabel);
             Controls.Add(GridCodeLabel);
             Controls.Add(pictureBox1);
             Controls.Add(dataGridView1);
-            Controls.Add(textBox7);
-            Controls.Add(textBox6);
-            Controls.Add(textBox5);
-            Controls.Add(textBox4);
-            Controls.Add(textBox3);
-            Controls.Add(textBox2);
-            Controls.Add(textBox1);
-            Controls.Add(ClientLabel);
-            Controls.Add(label6);
-            Controls.Add(CodeLabel);
+            Controls.Add(DescriptionTextBox);
+            Controls.Add(QuantityTextBox);
+            Controls.Add(ProductCodeTextBox);
+            Controls.Add(PriceTextBox);
+            Controls.Add(TextLabel3);
             Controls.Add(SellerLabel);
+            Controls.Add(TextLabel2);
+            Controls.Add(TextLabel1);
             Controls.Add(BillButton);
             Controls.Add(SetButton);
             Controls.Add(DeleteButton);
@@ -351,27 +340,25 @@
             Controls.SetChildIndex(DeleteButton, 0);
             Controls.SetChildIndex(SetButton, 0);
             Controls.SetChildIndex(BillButton, 0);
+            Controls.SetChildIndex(TextLabel1, 0);
+            Controls.SetChildIndex(TextLabel2, 0);
             Controls.SetChildIndex(SellerLabel, 0);
-            Controls.SetChildIndex(CodeLabel, 0);
-            Controls.SetChildIndex(label6, 0);
-            Controls.SetChildIndex(ClientLabel, 0);
-            Controls.SetChildIndex(textBox1, 0);
-            Controls.SetChildIndex(textBox2, 0);
-            Controls.SetChildIndex(textBox3, 0);
-            Controls.SetChildIndex(textBox4, 0);
-            Controls.SetChildIndex(textBox5, 0);
-            Controls.SetChildIndex(textBox6, 0);
-            Controls.SetChildIndex(textBox7, 0);
+            Controls.SetChildIndex(TextLabel3, 0);
+            Controls.SetChildIndex(PriceTextBox, 0);
+            Controls.SetChildIndex(ProductCodeTextBox, 0);
+            Controls.SetChildIndex(QuantityTextBox, 0);
+            Controls.SetChildIndex(DescriptionTextBox, 0);
             Controls.SetChildIndex(dataGridView1, 0);
             Controls.SetChildIndex(pictureBox1, 0);
             Controls.SetChildIndex(GridCodeLabel, 0);
             Controls.SetChildIndex(GridDescriptionLabel, 0);
             Controls.SetChildIndex(GridPriceLabel, 0);
             Controls.SetChildIndex(GridQuantityLabel, 0);
-            Controls.SetChildIndex(label5, 0);
             Controls.SetChildIndex(label2, 0);
             Controls.SetChildIndex(TotalPriceLabel, 0);
             Controls.SetChildIndex(label1, 0);
+            Controls.SetChildIndex(ClientLabel, 0);
+            Controls.SetChildIndex(ClientCodeTextBox, 0);
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
@@ -386,26 +373,24 @@
         private Button DeleteButton;
         private Button SetButton;
         private Button BillButton;
-        private Label SellerLabel;
+        private Label TextLabel1;
         private Label GridCodeLabel;
-        private Label CodeLabel;
-        private Label label6;
-        private Label ClientLabel;
-        private TextBox textBox1;
-        private TextBox textBox2;
-        private TextBox textBox3;
-        private TextBox textBox4;
-        private TextBox textBox5;
-        private TextBox textBox6;
-        private TextBox textBox7;
+        private Label TextLabel2;
+        private Label SellerLabel;
+        private Label TextLabel3;
+        private TextBox PriceTextBox;
+        private TextBox ProductCodeTextBox;
+        private TextBox QuantityTextBox;
+        private TextBox DescriptionTextBox;
         private DataGridView dataGridView1;
         private PictureBox pictureBox1;
         private Label GridDescriptionLabel;
         private Label GridPriceLabel;
         private Label GridQuantityLabel;
-        private Label label5;
         private Label label2;
         private Label TotalPriceLabel;
         private Label label1;
+        private Label ClientLabel;
+        private TextBox ClientCodeTextBox;
     }
 }

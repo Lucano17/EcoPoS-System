@@ -54,7 +54,7 @@
             // 
             // ClientLastNameTextBox
             // 
-            ClientLastNameTextBox.Location = new Point(251, 210);
+            ClientLastNameTextBox.Location = new Point(211, 206);
             ClientLastNameTextBox.Name = "ClientLastNameTextBox";
             ClientLastNameTextBox.Size = new Size(191, 27);
             ClientLastNameTextBox.TabIndex = 15;
@@ -62,7 +62,7 @@
             // 
             // ClientNameTextBox
             // 
-            ClientNameTextBox.Location = new Point(251, 147);
+            ClientNameTextBox.Location = new Point(211, 143);
             ClientNameTextBox.Name = "ClientNameTextBox";
             ClientNameTextBox.Size = new Size(191, 27);
             ClientNameTextBox.TabIndex = 14;
@@ -70,7 +70,7 @@
             // 
             // ClientIDTextBox
             // 
-            ClientIDTextBox.Location = new Point(251, 89);
+            ClientIDTextBox.Location = new Point(211, 89);
             ClientIDTextBox.Name = "ClientIDTextBox";
             ClientIDTextBox.Size = new Size(191, 27);
             ClientIDTextBox.TabIndex = 13;
@@ -81,9 +81,9 @@
             ClientLastNameLabel.AutoSize = true;
             ClientLastNameLabel.Location = new Point(42, 213);
             ClientLastNameLabel.Name = "ClientLastNameLabel";
-            ClientLastNameLabel.Size = new Size(140, 20);
+            ClientLastNameLabel.Size = new Size(142, 20);
             ClientLastNameLabel.TabIndex = 12;
-            ClientLastNameLabel.Text = "Precio del producto";
+            ClientLastNameLabel.Text = "Apellido del cliente:";
             ClientLastNameLabel.Click += ClientLastNameLabel_Click;
             // 
             // ClientNameLabel
@@ -91,9 +91,9 @@
             ClientNameLabel.AutoSize = true;
             ClientNameLabel.Location = new Point(42, 150);
             ClientNameLabel.Name = "ClientNameLabel";
-            ClientNameLabel.Size = new Size(137, 20);
+            ClientNameLabel.Size = new Size(140, 20);
             ClientNameLabel.TabIndex = 11;
-            ClientNameLabel.Text = "Nombre del cliente";
+            ClientNameLabel.Text = "Nombre del cliente:";
             ClientNameLabel.Click += ClientNameLabel_Click;
             // 
             // ClientIDLabel
@@ -101,9 +101,9 @@
             ClientIDLabel.AutoSize = true;
             ClientIDLabel.Location = new Point(42, 92);
             ClientIDLabel.Name = "ClientIDLabel";
-            ClientIDLabel.Size = new Size(97, 20);
+            ClientIDLabel.Size = new Size(100, 20);
             ClientIDLabel.TabIndex = 10;
-            ClientIDLabel.Text = "ID del cliente";
+            ClientIDLabel.Text = "ID del cliente:";
             ClientIDLabel.Click += ClientIDLabel_Click;
             // 
             // Mantenimiento_Clientes

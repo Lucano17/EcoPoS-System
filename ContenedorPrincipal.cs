@@ -136,5 +136,17 @@ namespace EcoPoS_System
             ConsClient.MdiParent = this;
             ConsClient.Show();
         }
+
+        private void procesosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void facturaciónToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Facturacion ProcFact = new Facturacion();
+            ProcFact.MdiParent = this;
+            ProcFact.Show();
+        }
     }
 }

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DLL_Library;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -19,6 +20,10 @@ namespace EcoPoS_System
 
         private void Facturacion_Load(object sender, EventArgs e)
         {
+            string seller = $"SELECT * FROM Usuarios WHERE id_user = {Login.Code}";
+            DataSet ds;
+            ds = Biblioteca.Herramientas(seller);
+            SellerLabel.Text = ds.Tables[0].Rows[0]["username"].ToString().Trim();
 
         }
 
@@ -52,6 +57,39 @@ namespace EcoPoS_System
 
         }
 
-        
+        private void SellerLabel_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void SearchButton_Click(object sender, EventArgs e)
+        {
+            try
+            {
+
+                if (string.IsNullOrEmpty(ClientCodeTextBox.Text.Trim()) == false)
+                {
+                    string cmd = string.Format($"SELECT Nombre_cliente FROM Clientes WHERE ID_clientes = '{ClientCodeTextBox.Text.Trim()}'");
+                    DataSet ds = Biblioteca.Herramientas(cmd);
+                    ClientLabel.Text = ds.Tables[0].Rows[0]["Nombre_cliente"].ToString().Trim();
+
+                    ProductCodeTextBox.Focus();
+                }
+            }
+            catch (Exception error)
+            {
+                MessageBox.Show("Ha ocurrido un error", error.Message);
+            }
+        }
+
+        private void ClientCodeTextBox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ProductCodeTextBox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
