@@ -14,3 +14,9 @@
 - Con la clase SqlDataAdapter, crear una variable y pasarle como
   parámetros cmd y la variable creada con la clases SqlConnection.
 - A la variable creada pasarle el método .Fill(DataSet).
+
+# TO-DO
+- Cambiar TextBox por ErrorTextBox (Control de usuario desde DLL) en:
+            - Facturación
+            - Mantenimiento
+            - Consultas
