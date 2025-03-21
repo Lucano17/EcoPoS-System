@@ -404,22 +404,23 @@
             // clientesToolStripMenuItem1
             // 
             clientesToolStripMenuItem1.Name = "clientesToolStripMenuItem1";
-            clientesToolStripMenuItem1.Size = new Size(158, 26);
+            clientesToolStripMenuItem1.Size = new Size(224, 26);
             clientesToolStripMenuItem1.Text = "Clientes";
             clientesToolStripMenuItem1.Click += clientesToolStripMenuItem1_Click;
             // 
             // productosToolStripMenuItem1
             // 
             productosToolStripMenuItem1.Name = "productosToolStripMenuItem1";
-            productosToolStripMenuItem1.Size = new Size(158, 26);
+            productosToolStripMenuItem1.Size = new Size(224, 26);
             productosToolStripMenuItem1.Text = "Productos";
             productosToolStripMenuItem1.Click += productosToolStripMenuItem1_Click;
             // 
             // ventasToolStripMenuItem
             // 
             ventasToolStripMenuItem.Name = "ventasToolStripMenuItem";
-            ventasToolStripMenuItem.Size = new Size(158, 26);
+            ventasToolStripMenuItem.Size = new Size(224, 26);
             ventasToolStripMenuItem.Text = "Ventas";
+            ventasToolStripMenuItem.Click += ventasToolStripMenuItem_Click;
             // 
             // helpMenu
             // 

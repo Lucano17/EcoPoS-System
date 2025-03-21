@@ -1,6 +1,6 @@
 ﻿namespace EcoPoS_System
 {
-    partial class Consultar_Ventas
+    partial class Ventas
     {
         /// <summary>
         /// Required designer variable.
@@ -34,18 +34,14 @@
             // 
             SearchButton.Click += SearchButton_Click;
             // 
-            // ExitButton
-            // 
-            ExitButton.Location = new Point(528, 349);
-            // 
-            // Consultar_Ventas
+            // Ventas
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
-            Name = "Consultar_Ventas";
-            Text = "Consultar_Ventas";
-            Load += Consultar_Ventas_Load;
+            Name = "Ventas";
+            Text = "Ventas";
+            Load += Ventas_Load;
             ResumeLayout(false);
             PerformLayout();
         }

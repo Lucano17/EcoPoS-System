@@ -148,5 +148,12 @@ namespace EcoPoS_System
             ProcFact.MdiParent = this;
             ProcFact.Show();
         }
+
+        private void ventasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Consultar_Ventas ConsVentas = new Consultar_Ventas();
+            ConsVentas.MdiParent = this;
+            ConsVentas.Show();
+        }
     }
 }

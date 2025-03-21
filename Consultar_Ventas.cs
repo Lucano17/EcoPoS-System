@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DLL_Library;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -20,6 +21,25 @@ namespace EcoPoS_System
         private void Consultar_Ventas_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void SearchButton_Click(object sender, EventArgs e)
+        {
+            if (string.IsNullOrEmpty(textBox1.Text.Trim()) == false)
+            {
+                try
+                {
+                    DataSet DS;
+                    string buscar = "SELECT * FROM Factura " +
+                        "WHERE nro_factura LIKE ('%" + textBox1.Text.Trim() + "%')";
+                    DS = Biblioteca.Herramientas(buscar);
+                    dataGridView1.DataSource = DS.Tables[0];
+                }
+                catch (Exception error)
+                {
+                    MessageBox.Show("No se puede conectar", error.Message);
+                }
+            }
         }
     }
 }
