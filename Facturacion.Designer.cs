@@ -374,7 +374,7 @@
             Controls.Add(SearchButton);
             Name = "Facturacion";
             StartPosition = FormStartPosition.CenterScreen;
-            Text = "Facturacion";
+            Text = "Facturación";
             WindowState = FormWindowState.Maximized;
             Load += Facturacion_Load;
             Controls.SetChildIndex(ExitButton, 0);

@@ -126,8 +126,7 @@
             Controls.Add(ProductNameLabel);
             Controls.Add(ProductIDLabel);
             Name = "Mantenimiento_Productos";
-            StartPosition = FormStartPosition.CenterScreen;
-            Text = "Mantenimiento_Productos";
+            Text = "Mantenimiento de productos";
             WindowState = FormWindowState.Maximized;
             Load += Mantenimiento_Productos_Load;
             Controls.SetChildIndex(RequestButton, 0);

@@ -40,8 +40,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(739, 393);
             Name = "Consultar_Cliente";
-            StartPosition = FormStartPosition.CenterScreen;
-            Text = "Consultar_Cliente";
+            Text = "Consultar cliente";
             WindowState = FormWindowState.Maximized;
             Load += Consultar_Cliente_Load;
             ResumeLayout(false);

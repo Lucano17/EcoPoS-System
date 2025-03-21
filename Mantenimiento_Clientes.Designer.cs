@@ -118,7 +118,8 @@
             Controls.Add(ClientNameLabel);
             Controls.Add(ClientIDLabel);
             Name = "Mantenimiento_Clientes";
-            Text = "Mantenimiento_Clientes";
+            Text = "Mantenimiento de clientes";
+            WindowState = FormWindowState.Maximized;
             Load += Mantenimiento_Clientes_Load;
             Controls.SetChildIndex(RequestButton, 0);
             Controls.SetChildIndex(SaveButton, 0);

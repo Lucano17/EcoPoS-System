@@ -44,7 +44,8 @@
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
             Name = "Consultar_Ventas";
-            Text = "Consultar_Ventas";
+            Text = "Consultar ventas";
+            WindowState = FormWindowState.Maximized;
             Load += Consultar_Ventas_Load;
             ResumeLayout(false);
             PerformLayout();
