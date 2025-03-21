@@ -346,6 +346,7 @@
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1032, 700);
+            ControlBox = false;
             Controls.Add(SetNewButton);
             Controls.Add(dataGridView1);
             Controls.Add(label6);
@@ -372,7 +373,9 @@
             Controls.Add(ClientsButton);
             Controls.Add(SearchButton);
             Name = "Facturacion";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Facturacion";
+            WindowState = FormWindowState.Maximized;
             Load += Facturacion_Load;
             Controls.SetChildIndex(ExitButton, 0);
             Controls.SetChildIndex(SearchButton, 0);

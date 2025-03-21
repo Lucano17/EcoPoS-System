@@ -107,6 +107,7 @@
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(746, 390);
+            ControlBox = false;
             Controls.Add(dataGridView1);
             Controls.Add(textBox1);
             Controls.Add(SearchButton);
@@ -114,6 +115,7 @@
             Controls.Add(PrintButton);
             Controls.Add(SelectButton);
             Name = "Consultas";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Consultas";
             Load += Consultas_Load_1;
             Controls.SetChildIndex(SelectButton, 0);
