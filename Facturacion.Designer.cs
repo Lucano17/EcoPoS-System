@@ -124,6 +124,7 @@
             BillButton.TabIndex = 6;
             BillButton.Text = "Facturar";
             BillButton.UseVisualStyleBackColor = true;
+            BillButton.Click += BillButton_Click;
             // 
             // TextLabel1
             // 

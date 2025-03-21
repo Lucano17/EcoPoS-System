@@ -16,7 +16,8 @@
 - A la variable creada pasarle el método .Fill(DataSet).
 
 # TO-DO
-- Cambiar TextBox por ErrorTextBox (Control de usuario desde DLL) en:
+  - Cambiar TextBox por ErrorTextBox (Control de usuario desde DLL) en:
             - Facturación
             - Mantenimiento
             - Consultas
+  - Elemento equivalente a ReportViewer (No compatible con .NET 8)

@@ -255,5 +255,39 @@ namespace EcoPoS_System
             total = 0;
             ClientCodeTextBox.Focus();
         }
+
+        private void BillButton_Click(object sender, EventArgs e)
+        {
+            if (contadorFila != 0)
+            {
+                try
+                {
+                    string cmd = string.Format($"Exec ActualizarFactura '{ClientCodeTextBox.Text.Trim()}'");
+                    DataSet DS = Biblioteca.Herramientas(cmd);
+                    string billNumber = DS.Tables[0].Rows[0]["nro_factura"].ToString().Trim();
+
+                    foreach (DataGridViewRow fila in dataGridView1.Rows)
+                    {
+                        cmd = string.Format($"Exec ActualizarDetalles '{billNumber}', '{fila.Cells[0].Value.ToString()}', '{fila.Cells[2].Value.ToString()}', '{fila.Cells[3].Value.ToString()}'");
+                        DS = Biblioteca.Herramientas(cmd);
+                    }
+
+                    cmd = "Exec DatosFactura " + billNumber;
+                    DS = Biblioteca.Herramientas(cmd);
+
+                    Factura bill = new Factura();
+                    // TO-DO: Report Viewer no válido para .Net 8. Buscar alternativas
+                    // En Factura[diseño], agregar la equivalencia a ReportViwer, y luego agregar el componente Informe1 creado
+                    //bill.ReportViewer1.LocalReport.DataSources[0].Value = DS.Tables[0];
+                    bill.ShowDialog();
+
+                    Nuevo();
+                }
+                catch (Exception error)
+                {
+                    MessageBox.Show("Ha ocurrido un error: " + error.Message);
+                }
+            }
+        }
     }
 }
